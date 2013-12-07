@@ -7,6 +7,7 @@
 //
 
 #import "LoginController.h"
+#import "DashboardController.h"
 #import "Server.h"
 
 @interface LoginController ()
@@ -49,15 +50,31 @@
     [[self server] username:@"" password:@"" handler:^(BOOL success){
         
         NSLog(@"Server:Login:%hhd", success);
-        //[self.spinner stopAnimating];
+        [self.spinner stopAnimating];
         
         if(success){
+            
             [[self status] setText:@"Yeah! Pronti attenti e via"];
-            //[self performSegueWithIdentifier: @"doLogin" sender:sender];
+            
+           // NSLog(@"nav controller: %@", self.navigationController);
+            
+//            [[self navigationController] pushViewController:[DashboardController new] animated:NO];
+            
+            [self performSegueWithIdentifier: @"doLogin" sender:self];
+            
         }else{
             [[self status] setText: @"Ups i dati non sono corretti"];
         }
     }];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        
+    if ([segue.identifier isEqualToString:@"doLogin"]) {
+        DashboardController *profileViewController = segue.destinationViewController;
+//        profileViewController.isFromDealView = YES;
+        profileViewController.hidesBottomBarWhenPushed = YES;
+    }
 }
 
 @end

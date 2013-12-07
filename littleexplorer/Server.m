@@ -13,7 +13,7 @@
 - (void) username:(NSString *) user password:(NSString*) pwd handler: (void (^)(BOOL success)) completation
 {
     NSLog(@"Server:Login");
-    completation(FALSE);
+    completation(YES);
 }
 
 @end

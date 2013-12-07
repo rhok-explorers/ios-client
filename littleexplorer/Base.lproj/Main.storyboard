@@ -76,17 +76,17 @@
                         <outlet property="login" destination="MnQ-Lh-KgL" id="BWs-To-USc"/>
                         <outlet property="spinner" destination="SSU-Pg-hzA" id="MYt-uO-6g9"/>
                         <outlet property="status" destination="0X9-yC-qRQ" id="lWu-eJ-zbI"/>
-                        <outlet property="view" destination="VGw-QZ-Eg5" id="Jw0-Wz-vXQ"/>
+                        <segue destination="OKD-TP-lvE" kind="push" identifier="doLogin" id="M3r-jL-vPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vug-ty-eSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93" y="88"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard Controller-->
         <scene sceneID="P3b-e0-PNL">
             <objects>
-                <viewController id="OKD-TP-lvE" sceneMemberID="viewController">
+                <viewController id="OKD-TP-lvE" customClass="DashboardController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MrS-Bw-JoJ"/>
                         <viewControllerLayoutGuide type="bottom" id="cZM-3D-vgU"/>
@@ -102,6 +102,9 @@
                                 <state key="normal" title="Inizia Una Nuova Avventura">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doAdventure:" destination="OKD-TP-lvE" eventType="touchUpInside" id="cST-VF-l0g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZv-Ea-pLj">
                                 <rect key="frame" x="34" y="293" width="253" height="30"/>
@@ -116,6 +119,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sb2-fi-mQ3"/>
+                    <connections>
+                        <outlet property="newadventure" destination="mXy-ho-k76" id="eEr-V7-bMo"/>
+                        <outlet property="restoreadventure" destination="oZv-Ea-pLj" id="8Ug-YJ-474"/>
+                        <segue destination="r74-ue-Stj" kind="push" identifier="newAdventure" id="Nrf-0x-Uzn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlA-hT-02K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,17 +144,21 @@
             </objects>
             <point key="canvasLocation" x="-375" y="88"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Walking Controller-->
         <scene sceneID="yN2-XO-jzZ">
             <objects>
-                <tableViewController id="r74-ue-Stj" sceneMemberID="viewController">
+                <tableViewController id="r74-ue-Stj" customClass="WalkingController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bnf-IZ-HPb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="98F-bI-uWO">
+                            <rect key="frame" x="0.0" y="130" width="320" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ffE-ZY-GnT" imageView="Yhy-sV-u9Q" style="IBUITableViewCellStyleDefault" id="IE4-sV-OdP">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="walking" textLabel="ffE-ZY-GnT" imageView="Yhy-sV-u9Q" style="IBUITableViewCellStyleDefault" id="IE4-sV-OdP">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IE4-sV-OdP" id="gjB-qk-Swn">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -172,10 +184,14 @@
                             <outlet property="delegate" destination="r74-ue-Stj" id="fU4-RQ-zkW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="bEh-81-Lp2"/>
+                    <connections>
+                        <outlet property="spinner" destination="98F-bI-uWO" id="Oxd-SC-Pel"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-RF-fHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="94"/>
+            <point key="canvasLocation" x="965" y="88"/>
         </scene>
     </scenes>
     <resources>
