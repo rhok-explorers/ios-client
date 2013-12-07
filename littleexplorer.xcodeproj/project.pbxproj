@@ -14,14 +14,13 @@
 		3D214CD318534BB700634D1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214CD218534BB700634D1B /* main.m */; };
 		3D214CD718534BB700634D1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214CD618534BB700634D1B /* AppDelegate.m */; };
 		3D214CDA18534BB700634D1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D214CD818534BB700634D1B /* Main.storyboard */; };
-		3D214CDD18534BB700634D1B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214CDC18534BB700634D1B /* FirstViewController.m */; };
-		3D214CE018534BB700634D1B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214CDF18534BB700634D1B /* SecondViewController.m */; };
 		3D214CE218534BB700634D1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D214CE118534BB700634D1B /* Images.xcassets */; };
 		3D214CE918534BB800634D1B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D214CE818534BB800634D1B /* XCTest.framework */; };
 		3D214CEA18534BB800634D1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D214CC618534BB700634D1B /* Foundation.framework */; };
 		3D214CEB18534BB800634D1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D214CCA18534BB700634D1B /* UIKit.framework */; };
 		3D214CF318534BB800634D1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D214CF118534BB800634D1B /* InfoPlist.strings */; };
 		3D214CF518534BB800634D1B /* littleexplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214CF418534BB800634D1B /* littleexplorerTests.m */; };
+		3DBEB0381853546E005AD3BA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEB0371853546E005AD3BA /* LoginController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +45,14 @@
 		3D214CD518534BB700634D1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D214CD618534BB700634D1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3D214CD918534BB700634D1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3D214CDB18534BB700634D1B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3D214CDC18534BB700634D1B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		3D214CDE18534BB700634D1B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		3D214CDF18534BB700634D1B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3D214CE118534BB700634D1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3D214CE718534BB800634D1B /* littleexplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleexplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D214CE818534BB800634D1B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3D214CF018534BB800634D1B /* littleexplorerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "littleexplorerTests-Info.plist"; sourceTree = "<group>"; };
 		3D214CF218534BB800634D1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D214CF418534BB800634D1B /* littleexplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = littleexplorerTests.m; sourceTree = "<group>"; };
+		3DBEB0361853546E005AD3BA /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		3DBEB0371853546E005AD3BA /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +112,11 @@
 		3D214CCC18534BB700634D1B /* littleexplorer */ = {
 			isa = PBXGroup;
 			children = (
+				3DBEB0361853546E005AD3BA /* LoginController.h */,
+				3DBEB0371853546E005AD3BA /* LoginController.m */,
 				3D214CD518534BB700634D1B /* AppDelegate.h */,
 				3D214CD618534BB700634D1B /* AppDelegate.m */,
 				3D214CD818534BB700634D1B /* Main.storyboard */,
-				3D214CDB18534BB700634D1B /* FirstViewController.h */,
-				3D214CDC18534BB700634D1B /* FirstViewController.m */,
-				3D214CDE18534BB700634D1B /* SecondViewController.h */,
-				3D214CDF18534BB700634D1B /* SecondViewController.m */,
 				3D214CE118534BB700634D1B /* Images.xcassets */,
 				3D214CCD18534BB700634D1B /* Supporting Files */,
 			);
@@ -254,10 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D214CE018534BB700634D1B /* SecondViewController.m in Sources */,
 				3D214CD718534BB700634D1B /* AppDelegate.m in Sources */,
-				3D214CDD18534BB700634D1B /* FirstViewController.m in Sources */,
 				3D214CD318534BB700634D1B /* main.m in Sources */,
+				3DBEB0381853546E005AD3BA /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +460,7 @@
 				3D214CFA18534BB800634D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D214CFB18534BB800634D1B /* Build configuration list for PBXNativeTarget "littleexplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +469,7 @@
 				3D214CFD18534BB800634D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
