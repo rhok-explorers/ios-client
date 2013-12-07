@@ -12,8 +12,9 @@
 
 @property (nonatomic, strong) IBOutlet id login;
 @property (nonatomic, strong) IBOutlet id spinner;
+@property (nonatomic, strong) IBOutlet id status;
 
-
+@property (nonatomic, strong) id server;
 - (IBAction) doLogin:(id)sender;
 
 

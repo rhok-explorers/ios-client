@@ -20,6 +20,7 @@
 		3D214CEB18534BB800634D1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D214CCA18534BB700634D1B /* UIKit.framework */; };
 		3D214CF318534BB800634D1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D214CF118534BB800634D1B /* InfoPlist.strings */; };
 		3D214CF518534BB800634D1B /* littleexplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214CF418534BB800634D1B /* littleexplorerTests.m */; };
+		3DAC8D711853637E00C07F90 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC8D701853637E00C07F90 /* Server.m */; };
 		3DBEB0381853546E005AD3BA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEB0371853546E005AD3BA /* LoginController.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		3D214CF018534BB800634D1B /* littleexplorerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "littleexplorerTests-Info.plist"; sourceTree = "<group>"; };
 		3D214CF218534BB800634D1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D214CF418534BB800634D1B /* littleexplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = littleexplorerTests.m; sourceTree = "<group>"; };
+		3DAC8D6F1853637E00C07F90 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		3DAC8D701853637E00C07F90 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
 		3DBEB0361853546E005AD3BA /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		3DBEB0371853546E005AD3BA /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +115,7 @@
 		3D214CCC18534BB700634D1B /* littleexplorer */ = {
 			isa = PBXGroup;
 			children = (
+				3DBEB03918535D45005AD3BA /* Utils */,
 				3DBEB0361853546E005AD3BA /* LoginController.h */,
 				3DBEB0371853546E005AD3BA /* LoginController.m */,
 				3D214CD518534BB700634D1B /* AppDelegate.h */,
@@ -150,6 +154,15 @@
 				3D214CF118534BB800634D1B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DBEB03918535D45005AD3BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3DAC8D6F1853637E00C07F90 /* Server.h */,
+				3DAC8D701853637E00C07F90 /* Server.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +264,7 @@
 			files = (
 				3D214CD718534BB700634D1B /* AppDelegate.m in Sources */,
 				3D214CD318534BB700634D1B /* main.m in Sources */,
+				3DAC8D711853637E00C07F90 /* Server.m in Sources */,
 				3DBEB0381853546E005AD3BA /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

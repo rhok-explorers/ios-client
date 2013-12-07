@@ -7,12 +7,15 @@
 //
 
 #import "LoginController.h"
+#import "Server.h"
 
 @interface LoginController ()
 
 @end
 
 @implementation LoginController
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +30,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSLog(@"Login Did Load");
+    self.server = [Server new];    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,9 +44,20 @@
 
 - (IBAction) doLogin:(id)sender
 {
+    [self.spinner startAnimating];
     
-    
-    [self performSegueWithIdentifier: @"doLogin" sender:sender];
+    [[self server] username:@"" password:@"" handler:^(BOOL success){
+        
+        NSLog(@"Server:Login:%hhd", success);
+        //[self.spinner stopAnimating];
+        
+        if(success){
+            [[self status] setText:@"Yeah! Pronti attenti e via"];
+            //[self performSegueWithIdentifier: @"doLogin" sender:sender];
+        }else{
+            [[self status] setText: @"Ups i dati non sono corretti"];
+        }
+    }];
 }
 
 @end
