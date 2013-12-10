@@ -7,12 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [GMSServices provideAPIKey:@"AIzaSyD3HEAw7gvOzDmTAeF-FjHcyOm8BE7FjIA"];
+    
+    // Create a location manager instance to determine if location services are enabled. This manager instance will be
+    // immediately released afterwards.
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.delegate = self;
+    
+    self.server = [Server new];
+    
     return YES;
 }
 							
@@ -42,5 +52,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

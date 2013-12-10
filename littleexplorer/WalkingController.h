@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CLLocationManagerDelegate.h>
 
-@interface WalkingController: UITableViewController <UITableViewDelegate>
+#import "Server.h"
+
+@interface WalkingController: UITableViewController <UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) IBOutlet id spinner;
+
+
 
 @end
